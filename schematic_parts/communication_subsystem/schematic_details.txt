@@ -1,0 +1,9 @@
+For Entire Implementation:
+Implemented both transmitter and receiver on breadboard using jumper wires to MSP430 launchpad
+Resistors/Caps used - Through-hole 10% tolerance
+
+
+For transmitter:
+
+MSP430 Launchpad GPIO 3.3V -> mosfet driver 5V -> LCD
+

@@ -1,0 +1,21 @@
+Firmware Requirements
+
+Transmission Side:
+
+- Have 2 distinct flashing frequencies (i.e. 200Hz/300Hz, 300Hz/400Hz etc. - for testing maybe 2Hz and 3Hz)
+- Enable some form of user input to type desired message
+- Convert desired message into ASCII binary or equivalent (i.e. Text="H" to AsciiBinary="01001000")
+	- Could even consider some form of variable length coding for efficiency - but for basic working 	  model just send fixed messages
+- Check over converted (binary) message and if there is a 0, flash at f1, if 1 flash at f2
+- Consider some form of error checking (either parity bit or repetition coding)
+- Set some fixed message types (a 'wake up' message, an 'end of transmission' message etc.)
+
+
+Receiver Side:
+
+- Configure the ADC to capture incoming signal from the photodiode circuit (~0-3V)
+- De-modulate the signal to detect 0's and 1's from f1 and f2
+- Decode the incoming message based on the coding/decoding scheme (checking for parity bit/repetition coding)
+- Display the message received
+
+
